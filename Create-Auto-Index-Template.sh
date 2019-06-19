@@ -258,7 +258,7 @@ curl -X PUT "http://localhost:9200/_template/active-tweets" -H 'Content-Type: ap
 				},
 				"bdy": {
 					"type": "keyword",
-					"analyzer": "standard"
+					"eager_global_ordinals": true
 				},
 				"body": {
 					"type": "text",
