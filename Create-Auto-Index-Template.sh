@@ -246,10 +246,6 @@ curl -X PUT "http://localhost:9200/_template/active-tweets" -H 'Content-Type: ap
 				"user_statuses_count": {
 					"type": "integer"
 				},
-				"actor_followers_count": {
-					"type": "integer"
-				},
-
 				"actor_friends_count": {
 					"type": "integer"
 				},
@@ -261,17 +257,15 @@ curl -X PUT "http://localhost:9200/_template/active-tweets" -H 'Content-Type: ap
 					"eager_global_ordinals": true
 				},
 				"bdy": {
-					"type": "text",
+					"type": "keyword",
 					"analyzer": "standard"
 				},
 				"body": {
 					"type": "text",
-					"analyzer": "keyword",
 					"eager_global_ordinals": true
 				},
 				"generator_display_name": {
-					"type": "text",
-					"analyzer": "keyword",
+					"type": "keyword",
 					"eager_global_ordinals": true
 				},
 
@@ -314,6 +308,9 @@ curl -X PUT "http://localhost:9200/_template/active-tweets" -H 'Content-Type: ap
 				"retweet_count": {
 					"type": "integer"
 				},
+				"original_retweet_count": {
+                	"type": "integer"
+                },
 				"verb": {
 					"type": "keyword",
 					"eager_global_ordinals": true
