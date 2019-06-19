@@ -31,7 +31,7 @@ curl -X PUT "http://localhost:9200/_template/active-tweets" -H 'Content-Type: ap
 		}
 	},
 	"mappings": {
-		"body": {
+		"doc": {
 			"properties": {
 				"entities": {
 					"properties": {
