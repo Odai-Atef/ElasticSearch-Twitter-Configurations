@@ -267,6 +267,7 @@ curl -X PUT "http://localhost:9200/_template/active-tweets" -H 'Content-Type: ap
 				},
 				"generator_display_name": {
 					"type": "keyword",
+					"fielddata": true,
 					"eager_global_ordinals": true
 				},
 
