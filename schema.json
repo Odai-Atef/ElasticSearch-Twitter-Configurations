@@ -241,8 +241,10 @@
       "analyzer": "standard"
     },
     "full_text": {
-          "type": "text",
-					"analyzer": "standard"
+      "type": "text",
+      "analyzer": "whitespace",
+      "fielddata": true,
+      "eager_global_ordinals": true
     },
     "generator_display_name": {
       "type": "text",
