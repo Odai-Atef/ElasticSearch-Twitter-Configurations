@@ -3,6 +3,7 @@
     "tw-*"
   ],
   "settings": {
+    "index.lifecycle.name": "tweet_policy",
     "number_of_shards": 4,
     "number_of_replicas": 2
   },
