@@ -1,0 +1,25 @@
+{
+  "policy": {
+    "phases": {
+      "warm": {
+        "min_age": "3d"
+      },
+      "cold": {
+        "min_age": "15d",
+        "actions": {
+          "allocate": {
+            "require": {
+              "type": "cold"
+            }
+          }
+        }
+      },
+      "delete": {
+        "min_age": "31d",
+        "actions": {
+          "delete": {}
+        }
+      }
+    }
+  }
+}
