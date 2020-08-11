@@ -2,10 +2,15 @@
   "policy": {
     "phases": {
       "warm": {
-        "min_age": "3d"
+        "min_age": "3d",
+        "actions": {
+          "allocate": {
+            "number_of_replicas": 2
+          }
+        }
       },
       "cold": {
-        "min_age": "15d",
+        "min_age": "21d",
         "actions": {
           "allocate": {
             "require": {
