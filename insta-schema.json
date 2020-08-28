@@ -1,0 +1,150 @@
+{
+	"properties": {
+		"__typename": {
+			"type": "text",
+			"fields": {
+				"keyword": {
+					"type": "keyword"
+				}
+			}
+		},
+		"accessibility_caption": {
+			"type": "text",
+			"eager_global_ordinals": true,
+			"analyzer": "whitespace",
+			"fielddata": true
+		},
+		"caption": {
+			"type": "text",
+			"analyzer": "standard"
+		},
+		"comments_disabled": {
+			"type": "boolean"
+		},
+		"dimensions": {
+			"properties": {
+				"height": {
+					"type": "integer"
+				},
+				"width": {
+					"type": "integer"
+				}
+			}
+		},
+		"display_url": {
+			"type": "text",
+			"eager_global_ordinals": true
+		},
+		"edge_liked_by": {
+			"properties": {
+				"count": {
+					"type": "long"
+				}
+			}
+		},
+		"edge_media_preview_like": {
+			"properties": {
+				"count": {
+					"type": "long"
+				}
+			}
+		},
+		"edge_media_to_caption": {
+			"properties": {
+				"edges": {
+					"properties": {
+						"node": {
+							"properties": {
+								"text": {
+									"type": "text",
+									"fields": {
+										"keyword": {
+											"type": "keyword"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"edge_media_to_comment": {
+			"properties": {
+				"count": {
+					"type": "long"
+				}
+			}
+		},
+		"hashtags": {
+			"type": "text",
+			"eager_global_ordinals": true,
+			"analyzer": "whitespace",
+			"fielddata": true
+		},
+		"id": {
+			"type": "keyword",
+			"eager_global_ordinals": true
+		},
+		"is_video": {
+			"type": "boolean"
+		},
+		"owner": {
+			"properties": {
+				"id": {
+					"type": "text",
+					"fielddata": true
+				}
+			}
+		},
+		"product_type": {
+			"type": "text",
+			"fields": {
+				"keyword": {
+					"type": "keyword"
+				}
+			}
+		},
+		"shortcode": {
+			"type": "text",
+			"fields": {
+				"keyword": {
+					"type": "keyword"
+				}
+			}
+		},
+		"taken_at_timestamp": {
+			"type": "date"
+		},
+		"thumbnail_resources": {
+			"properties": {
+				"config_height": {
+					"type": "long"
+				},
+				"config_width": {
+					"type": "long"
+				},
+				"src": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				}
+			}
+		},
+		"thumbnail_src": {
+			"type": "text",
+			"fields": {
+				"keyword": {
+					"type": "keyword"
+				}
+			}
+		},
+		"video_view_count": {
+			"type": "integer"
+		}
+
+	}
+}
