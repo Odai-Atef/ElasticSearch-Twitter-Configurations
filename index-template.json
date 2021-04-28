@@ -992,6 +992,9 @@
         "retweeted": {
           "type": "boolean"
         },
+        "sensitive": {
+          "type": "boolean"
+        },
         "retweeted_status": {
           "properties": {
             "created_at": {
