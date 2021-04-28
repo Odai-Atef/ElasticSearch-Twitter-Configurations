@@ -788,6 +788,12 @@
           "eager_global_ordinals": true,
           "fielddata": true
         },
+       "emoji": {
+          "type": "text",
+          "analyzer": "whitespace",
+          "eager_global_ordinals": true,
+          "fielddata": true
+        },
         "gender": {
           "type": "keyword",
           "eager_global_ordinals": true
