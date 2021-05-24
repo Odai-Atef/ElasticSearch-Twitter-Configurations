@@ -34,7 +34,7 @@
         "coordinates": {
           "properties": {
             "coordinates": {
-              "type": "float"
+              "type": "geo_point"
             },
             "type": {
               "type": "text",
