@@ -1,0 +1,379 @@
+{
+	"index_patterns": [
+		"tk-*"
+	],
+	"settings": {
+		"index.lifecycle.name": "tiktok_policy",
+		"number_of_shards": 4,
+		"number_of_replicas": 2
+	},
+	"mappings": {
+		"properties": {
+			"authorMeta": {
+				"properties": {
+					"avatar": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword"
+							}
+						}
+					},
+					"digg": {
+						"type": "long"
+					},
+					"fans": {
+						"type": "long"
+					},
+					"following": {
+						"type": "long"
+					},
+					"heart": {
+						"type": "long"
+					},
+					"id": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword"
+							}
+						}
+					},
+					"name": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"nickName": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					},
+					"secUid": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"signature": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"verified": {
+						"type": "boolean"
+					},
+					"video": {
+						"type": "long"
+					}
+				}
+			},
+			"commentCount": {
+				"type": "long"
+			},
+			"covers": {
+				"properties": {
+					"default": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"dynamic": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"origin": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					}
+				}
+			},
+			"createTime": {
+				"type": "long"
+			},
+			"diggCount": {
+				"type": "long"
+			},
+			"downloaded": {
+				"type": "boolean"
+			},
+			"effectStickers": {
+				"properties": {
+					"id": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"name": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					}
+				}
+			},
+			"hashtags": {
+				"properties": {
+					"cover": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					},
+					"id": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"name": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"title": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					}
+				}
+			},
+			"id": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			},
+			"musicMeta": {
+				"properties": {
+					"coverLarge": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"coverMedium": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"coverThumb": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"ignore_above": 256
+							}
+						}
+					},
+					"duration": {
+						"type": "long"
+					},
+					"musicAlbum": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					},
+					"musicAuthor": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					},
+					"musicId": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					},
+					"musicName": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					},
+					"musicOriginal": {
+						"type": "boolean"
+					},
+					"playUrl": {
+						"type": "text",
+						"fields": {
+							"keyword": {
+								"type": "keyword",
+								"eager_global_ordinals": true,
+								"ignore_above": 256
+							}
+						}
+					}
+				}
+			},
+			"playCount": {
+				"type": "long"
+			},
+			"secretID": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			},
+			"shareCount": {
+				"type": "long"
+			},
+			"text": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			},
+			"full_text": {
+				"type": "text",
+				"analyzer": "whitespace",
+				"eager_global_ordinals": true,
+				"fielddata": true
+			},
+			"emoji": {
+				"type": "text",
+				"analyzer": "whitespace",
+				"eager_global_ordinals": true,
+				"fielddata": true
+			},
+			"videoApiUrlNoWaterMark": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			},
+			"videoMeta": {
+				"properties": {
+					"duration": {
+						"type": "long"
+					},
+					"height": {
+						"type": "long"
+					},
+					"width": {
+						"type": "long"
+					}
+				}
+			},
+			"videoUrl": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"eager_global_ordinals": true,
+						"ignore_above": 256
+					}
+				}
+			},
+			"videoUrlNoWaterMark": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			},
+			"webVideoUrl": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			}
+		}
+	}
+
+}
