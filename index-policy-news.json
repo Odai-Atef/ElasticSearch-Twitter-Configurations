@@ -1,1 +1,65 @@
+{
+	"index_patterns": [
+		"nw-*"
+	],
+	"settings": {
+		"index.lifecycle.name": "tiktok_policy",
+		"number_of_shards": 4,
+		"number_of_replicas": 2
+	},
+	"mappings": {
+		"properties": {
+			"id": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword",
+						"ignore_above": 256
+					}
+				}
+			},
+			"created_at": {
+				"type": "date",
+				"format": "yyyy-MM-dd HH:mm:ss"
+			},
+			"content": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword"
+					}
+				}
+			},
+			"title": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword"
+					}
+				}
+			},
+			"link": {
+				"type": "text",
+				"fields": {
+					"keyword": {
+						"type": "keyword"
+					}
+				}
+			},
+			"full_title": {
+				"type": "text",
+				"analyzer": "whitespace",
+				"eager_global_ordinals": true,
+				"fielddata": true
+			},
+			"full_text": {
+				"type": "text",
+				"analyzer": "whitespace",
+				"eager_global_ordinals": true,
+				"fielddata": true
+			}
 
+		}
+	}
+
+}
