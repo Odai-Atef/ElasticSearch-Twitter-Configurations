@@ -4,7 +4,7 @@
   ],
   "template": {
     "settings": {
-      "index.lifecycle.name": "tiktok_policy",
+      "index.lifecycle.name": "news_policy",
       "number_of_shards": 4,
       "number_of_replicas": 2
     },
