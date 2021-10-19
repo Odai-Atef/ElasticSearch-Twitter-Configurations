@@ -11,12 +11,7 @@
 		"mappings": {
 			"properties": {
 				"body": {
-					"type": "text",
-					"fields": {
-						"keyword": {
-							"type": "keyword"
-						}
-					}
+					"type": "text"
 				},
 				"created_at": {
 					"type": "date",
@@ -53,13 +48,7 @@
 					}
 				},
 				"title": {
-					"type": "text",
-					"fields": {
-						"keyword": {
-							"type": "keyword"
-
-						}
-					}
+					"type": "text"
 				}
 			}
 		}
