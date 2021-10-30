@@ -1,0 +1,269 @@
+{
+	"index_patterns": ["tk-*"],
+	"template": {
+		"settings": {
+			"index": {
+				"number_of_shards": "4",
+				"number_of_replicas": "2"
+			}
+		},
+		"mappings": {
+			"properties": {
+				"created_at": {
+					"type": "date",
+					"format": "EEE MMM dd HH:mm:ss Z yyyy"
+				},
+				"authorMeta": {
+					"properties": {
+						"avatar": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword"
+								}
+							}
+						},
+						"digg": {
+							"type": "long"
+						},
+						"fans": {
+							"type": "long"
+						},
+						"following": {
+							"type": "long"
+						},
+						"heart": {
+							"type": "long"
+						},
+						"id": {
+							"type": "text"
+
+						},
+						"name": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"ignore_above": 256
+								}
+							}
+						},
+						"nickName": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"eager_global_ordinals": true,
+									"ignore_above": 256
+								}
+							}
+						},
+						"secUid": {
+							"type": "text"
+						},
+						"signature": {
+							"type": "text"
+
+						},
+						"verified": {
+							"type": "boolean"
+						},
+						"video": {
+							"type": "long"
+						}
+					}
+				},
+				"commentCount": {
+					"type": "long"
+				},
+				"covers": {
+					"properties": {
+						"default": {
+							"type": "text"
+
+						},
+						"dynamic": {
+							"type": "text"
+						},
+						"origin": {
+							"type": "text"
+						}
+					}
+				},
+				"createTime": {
+					"type": "long"
+				},
+				"diggCount": {
+					"type": "long"
+				},
+				"downloaded": {
+					"type": "boolean"
+				},
+				"effectStickers": {
+					"properties": {
+						"id": {
+							"type": "text"
+						},
+						"name": {
+							"type": "text"
+						}
+					}
+				},
+				"emoji": {
+					"type": "text",
+					"analyzer": "whitespace",
+					"eager_global_ordinals": true,
+					"fielddata": true
+				},
+				"full_text": {
+					"type": "text",
+					"analyzer": "whitespace",
+					"eager_global_ordinals": true,
+					"fielddata": true
+				},
+				"hashtags": {
+					"properties": {
+						"cover": {
+							"type": "text"
+
+						},
+						"id": {
+							"type": "text"
+						},
+						"name": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"ignore_above": 256
+								}
+							}
+						},
+						"title": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"ignore_above": 256
+								}
+							}
+						}
+					}
+				},
+				"id": {
+					"type": "text"
+				},
+				"mentions": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword",
+							"ignore_above": 256
+						}
+					}
+				},
+				"musicMeta": {
+					"properties": {
+						"coverLarge": {
+							"type": "text"
+						},
+						"coverMedium": {
+							"type": "text"
+						},
+						"coverThumb": {
+							"type": "text"
+						},
+						"duration": {
+							"type": "long"
+						},
+						"musicAlbum": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"eager_global_ordinals": true,
+									"ignore_above": 256
+								}
+							}
+						},
+						"musicAuthor": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"eager_global_ordinals": true,
+									"ignore_above": 256
+								}
+							}
+						},
+						"musicId": {
+							"type": "text"
+						},
+						"musicName": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"eager_global_ordinals": true,
+									"ignore_above": 256
+								}
+							}
+						},
+						"musicOriginal": {
+							"type": "boolean"
+						},
+						"playUrl": {
+							"type": "text"
+						}
+					}
+				},
+				"playCount": {
+					"type": "long"
+				},
+				"secretID": {
+					"type": "text"
+
+				},
+				"shareCount": {
+					"type": "long"
+				},
+				"text": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword",
+							"ignore_above": 256
+						}
+					}
+				},
+				"videoApiUrlNoWaterMark": {
+					"type": "text"
+				},
+				"videoMeta": {
+					"properties": {
+						"duration": {
+							"type": "long"
+						},
+						"height": {
+							"type": "long"
+						},
+						"width": {
+							"type": "long"
+						}
+					}
+				},
+				"videoUrl": {
+					"type": "text"
+				},
+				"videoUrlNoWaterMark": {
+					"type": "text"
+				},
+				"webVideoUrl": {
+					"type": "text"
+				}
+			}
+		}
+
+
+	}
+}
