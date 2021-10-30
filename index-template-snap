@@ -1,0 +1,196 @@
+{
+	"index_patterns": ["sn-*"],
+	"template": {
+		"settings": {
+			"index": {
+				"number_of_shards": "2",
+				"number_of_replicas": "2"
+			}
+		},
+		"mappings": {
+			"properties": {
+				"duration": {
+					"type": "long"
+				},
+				"id": {
+					"type": "text"
+				},
+				"poi": {
+					"properties": {
+						"id": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"ignore_above": 256
+								}
+							}
+						},
+						"title": {
+							"properties": {
+								"fallback": {
+									"type": "text",
+									"fields": {
+										"keyword": {
+											"type": "keyword",
+											"ignore_above": 256
+										}
+									}
+								},
+								"strings": {
+									"properties": {
+										"locale": {
+											"type": "text",
+											"fields": {
+												"keyword": {
+													"type": "keyword",
+													"ignore_above": 256
+												}
+											}
+										},
+										"text": {
+											"type": "text",
+											"fields": {
+												"keyword": {
+													"type": "keyword",
+													"ignore_above": 256
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"snapInfo": {
+					"properties": {
+						"localitySubtitle": {
+							"properties": {
+								"fallback": {
+									"type": "text",
+									"fields": {
+										"keyword": {
+											"type": "keyword",
+											"ignore_above": 256
+										}
+									}
+								},
+								"strings": {
+									"properties": {
+										"locale": {
+											"type": "text",
+											"fields": {
+												"keyword": {
+													"type": "keyword",
+													"ignore_above": 256
+												}
+											}
+										},
+										"text": {
+											"type": "text",
+											"fields": {
+												"keyword": {
+													"type": "keyword",
+													"ignore_above": 256
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						"publicMediaInfo": {
+							"properties": {
+								"publicImageMediaInfo": {
+									"properties": {
+										"mediaUrl": {
+											"type": "text",
+											"fields": {
+												"keyword": {
+													"type": "keyword",
+													"ignore_above": 256
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						"snapMediaType": {
+							"type": "text",
+							"fields": {
+								"keyword": {
+									"type": "keyword",
+									"ignore_above": 256
+								}
+							}
+						},
+						"streamingMediaInfo": {
+							"properties": {
+								"mediaUrl": {
+									"type": "text"
+								},
+								"overlayUrl": {
+									"type": "text"
+								},
+								"prefixUrl": {
+									"type": "text"
+								},
+								"previewUrl": {
+									"type": "text"
+								},
+								"previewWithOverlayUrl": {
+									"type": "text"
+								}
+							}
+						},
+						"title": {
+							"properties": {
+								"fallback": {
+									"type": "text",
+									"fields": {
+										"keyword": {
+											"type": "keyword",
+											"ignore_above": 256
+										}
+									}
+								},
+								"strings": {
+									"properties": {
+										"locale": {
+											"type": "text",
+											"fields": {
+												"keyword": {
+													"type": "keyword",
+													"ignore_above": 256
+												}
+											}
+										},
+										"text": {
+											"type": "text",
+											"fields": {
+												"keyword": {
+													"type": "keyword",
+													"ignore_above": 256
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"timestamp": {
+					"type": "date"
+				},
+				"created_at": {
+					"type": "date",
+					"format": "EEE MMM dd HH:mm:ss Z yyyy"
+				}
+			}
+		}
+
+	}
+}
